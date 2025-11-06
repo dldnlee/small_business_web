@@ -1,4 +1,3 @@
-import Header from './components/Header';
 import Footer from './components/Footer';
 import HeroSection from './components/HeroSection';
 import GovernmentProgramsSection from './components/GovernmentProgramsSection';
@@ -9,7 +8,6 @@ import ProgramDetailsSection from './components/ProgramDetailsSection';
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
-      <Header />
       <div className='mx-auto w-full max-w-7xl flex flex-col'>
         <HeroSection />
         <GovernmentProgramsSection />

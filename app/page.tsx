@@ -1,7 +1,7 @@
 import Header from './components/Header';
 import Footer from './components/Footer';
 import HeroSection from './components/HeroSection';
-// import GovernmentProgramsSection from './components/GovernmentProgramsSection';
+import GovernmentProgramsSection from './components/GovernmentProgramsSection';
 // import BusinessTypeSection from './components/BusinessTypeSection';
 import ContactFormSection from './components/ContactFormSection';
 import ProgramDetailsSection from './components/ProgramDetailsSection';
@@ -12,6 +12,7 @@ export default function Home() {
         <Header />
       <div className='mx-auto w-full bg-black max-w-7xl'>
         <HeroSection />
+        <GovernmentProgramsSection />
         <ProgramDetailsSection />
         <ContactFormSection />
         <Footer />

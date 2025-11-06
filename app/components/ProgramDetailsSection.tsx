@@ -44,7 +44,7 @@ export default function ProgramDetailsSection() {
       <div className="w-full">
         {/* 정부지원사업 Header */}
         <motion.div
-          className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl shadow-2xl p-8 mb-8 text-white overflow-hidden relative"
+          className="bg-gradient-to-br from-blue-600 to-blue-800 p-8 text-white overflow-hidden relative"
           {...fadeInUp}
         >
           <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full -mr-32 -mt-32"></div>
@@ -56,12 +56,15 @@ export default function ProgramDetailsSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex justify-center mb-4"
           >
-            <HiSparkles className="text-6xl text-yellow-300" />
+            {/* <HiSparkles className="text-6xl text-yellow-300" /> */}
           </motion.div>
 
-          <h2 className="text-4xl font-bold mb-8 text-center relative z-10">
-            정부지원사업 – JSENERGY 패수열회수기
-          </h2>
+          <div className='text-center mb-8'>
+            <h2 className="text-xl mb-2">
+              정부지원사업 소개
+            </h2>
+            <p className='text-4xl font-bold'>JSENERGY 패수열회수기</p>
+          </div>
 
           <motion.div
             className="space-y-5 text-lg relative z-10"
@@ -69,44 +72,44 @@ export default function ProgramDetailsSection() {
             initial="initial"
             animate="animate"
           >
-            <motion.div variants={fadeInUp} className="flex items-start gap-3 bg-white/10 p-4 rounded-lg backdrop-blur-sm">
+            <motion.div variants={fadeInUp} className="flex items-start gap-3 bg-white/10 p-4 backdrop-blur-sm">
               <FaLeaf className="text-green-300 text-2xl mt-1 flex-shrink-0" />
-              <p>사무나업체의 에너지비용을 <span className="font-bold text-yellow-300">최소40%이상</span> 절감해드립니다.</p>
+              <p>사우나 업체의 에너지비용<span className="font-bold text-yellow-300">최소 45% 이상</span> 절감</p>
             </motion.div>
 
-            <motion.div variants={fadeInUp} className="flex items-start gap-3 bg-white/10 p-4 rounded-lg backdrop-blur-sm">
+            <motion.div variants={fadeInUp} className="flex items-start gap-3 bg-white/10 p-4 backdrop-blur-sm">
               <FaMoneyBillWave className="text-green-300 text-2xl mt-1 flex-shrink-0" />
-              <p>에너지절감기 설치비<span className="font-bold">80% 혹자</span> (서울시 무이자, 경기도 1.5%)</p>
+              <p>에너지절감기 설치비<span className="font-bold">90% 융자</span> (서울시 무이자, 경기도 1.5%)</p>
             </motion.div>
 
-            <motion.div variants={fadeInUp} className="flex items-start gap-3 bg-yellow-400 text-blue-900 p-5 rounded-lg shadow-lg">
+            {/* <motion.div variants={fadeInUp} className="flex items-start gap-3 bg-yellow-400 text-blue-900 p-5">
               <FaArrowRight className="text-2xl mt-1 flex-shrink-0 animate-pulse" />
               <p className="font-bold text-xl">무료견적기획을 놓치지 마세요</p>
-            </motion.div>
+            </motion.div> */}
 
-            <motion.div variants={fadeInUp} className="flex items-start gap-3 bg-white/10 p-4 rounded-lg backdrop-blur-sm">
+            <motion.div variants={fadeInUp} className="flex items-start gap-3 bg-white/10 p-4 backdrop-blur-sm">
               <FaRecycle className="text-green-300 text-2xl mt-1 flex-shrink-0" />
               <p>폐수열회수기를통해 <span className="font-bold text-yellow-300">연분비절감률 40%이상</span></p>
             </motion.div>
-
-            <motion.div variants={fadeInUp} className="flex items-start gap-3 bg-white/20 p-5 rounded-lg backdrop-blur-sm border-2 border-yellow-300 mt-6">
+{/* 
+            <motion.div variants={fadeInUp} className="flex items-start gap-3 bg-white/20 p-5 backdrop-blur-sm border-2 border-yellow-300 mt-6">
               <FaCheckCircle className="text-yellow-300 text-2xl mt-1 flex-shrink-0" />
               <p className="font-bold text-lg">정부지원 응자금신청 - 대신해드립니다.</p>
-            </motion.div>
-
-            <motion.div variants={fadeInUp} className="flex items-start gap-3 bg-white/10 p-5 rounded-lg backdrop-blur-sm mt-4">
+            </motion.div> */}
+{/* 
+            <motion.div variants={fadeInUp} className="flex items-start gap-3 bg-white/10 p-5 backdrop-blur-sm mt-4">
               <FaPhone className="text-yellow-300 text-2xl mt-1 flex-shrink-0" />
               <div>
                 <p className="font-semibold">신규생애너지전문주주 제이에스에너지</p>
                 <p className="text-yellow-300 font-bold text-xl mt-2">성무이사 이동후 010-6894-0988</p>
               </div>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
         </motion.div>
 
         {/* 확석 소개 (인증서) */}
         <motion.div
-          className="bg-white rounded-2xl shadow-xl p-8 mb-8"
+          className="bg-white p-8"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -132,7 +135,7 @@ export default function ProgramDetailsSection() {
               <motion.div
                 key={index}
                 variants={scaleIn}
-                className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 h-64 flex flex-col items-center justify-center hover:shadow-lg transition-shadow duration-300 border-2 border-blue-200"
+                className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 h-64 flex flex-col items-center justify-center transition-all duration-300 border-2 border-blue-200"
                 whileHover={{ scale: 1.05 }}
               >
                 <cert.icon className="text-blue-600 text-6xl mb-4" />
@@ -149,7 +152,7 @@ export default function ProgramDetailsSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-lg p-6 h-96 flex flex-col items-center justify-center border-2 border-blue-200">
+            <div className="bg-gradient-to-r from-blue-50 to-green-50 p-6 h-96 flex flex-col items-center justify-center border-2 border-blue-200">
               <FaCog className="text-blue-600 text-8xl mb-4 animate-spin" style={{ animationDuration: '8s' }} />
               <p className="text-gray-700 text-center font-semibold text-lg">[폐수열 회수 시스템 프로세스 다이어그램]</p>
             </div>
@@ -158,7 +161,7 @@ export default function ProgramDetailsSection() {
 
         {/* 폐수열수 시스템 공정 설명 */}
         <motion.div
-          className="bg-white rounded-2xl shadow-xl p-8 mb-8"
+          className="bg-white p-8"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -178,7 +181,7 @@ export default function ProgramDetailsSection() {
           >
             <motion.div
               variants={fadeInUp}
-              className="bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-xl border-l-4 border-blue-600"
+              className="bg-gradient-to-r from-blue-50 to-cyan-50 p-6 border-l-4 border-blue-600"
             >
               <h4 className="text-lg font-semibold mb-3 flex items-center">
                 <span className="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-3 text-lg shadow-lg">1</span>
@@ -195,7 +198,7 @@ export default function ProgramDetailsSection() {
 
             <motion.div
               variants={fadeInUp}
-              className="bg-gradient-to-r from-orange-50 to-red-50 p-6 rounded-xl border-l-4 border-orange-600"
+              className="bg-gradient-to-r from-orange-50 to-red-50 p-6 border-l-4 border-orange-600"
             >
               <h4 className="text-lg font-semibold mb-3 flex items-center">
                 <span className="bg-orange-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-3 text-lg shadow-lg">2</span>
@@ -217,9 +220,9 @@ export default function ProgramDetailsSection() {
             {/* 열교환 데이터 테이블 */}
             <motion.div
               variants={fadeInUp}
-              className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg p-6 border-2 border-purple-200"
+              className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 border-2 border-purple-200"
             >
-              <div className="bg-white rounded-lg h-64 flex flex-col items-center justify-center shadow-inner">
+              <div className="bg-white h-64 flex flex-col items-center justify-center">
                 <FaTachometerAlt className="text-purple-600 text-7xl mb-4" />
                 <p className="text-gray-700 text-center font-semibold text-lg">[열교환 성능 데이터 테이블 이미지]</p>
               </div>
@@ -229,7 +232,7 @@ export default function ProgramDetailsSection() {
 
         {/* 사업 소개 (산업시설) */}
         <motion.div
-          className="bg-white rounded-2xl shadow-xl p-8 mb-8"
+          className="bg-white p-8"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -258,9 +261,9 @@ export default function ProgramDetailsSection() {
                   key={item}
                   variants={scaleIn}
                   whileHover={{ scale: 1.05, y: -5 }}
-                  className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg p-4 h-40 flex flex-col items-center justify-center cursor-pointer shadow-md hover:shadow-xl transition-shadow duration-300"
+                  className="bg-gradient-to-br from-gray-100 to-gray-200 p-4 h-40 flex flex-col items-center justify-center cursor-pointer transition-all duration-300"
                 >
-                  <div className="bg-gradient-to-br from-blue-200 to-blue-300 w-full h-24 rounded mb-2 flex items-center justify-center">
+                  <div className="bg-gradient-to-br from-blue-200 to-blue-300 w-full h-24 mb-2 flex items-center justify-center">
                     <FaIndustry className="text-blue-700 text-4xl" />
                   </div>
                   <p className="text-sm text-gray-700 text-center font-semibold">[시설 {item}]</p>
@@ -287,9 +290,9 @@ export default function ProgramDetailsSection() {
                   key={item}
                   variants={scaleIn}
                   whileHover={{ scale: 1.05, y: -5 }}
-                  className="bg-gradient-to-br from-green-100 to-green-200 rounded-lg p-4 h-40 flex flex-col items-center justify-center cursor-pointer shadow-md hover:shadow-xl transition-shadow duration-300"
+                  className="bg-gradient-to-br from-green-100 to-green-200 p-4 h-40 flex flex-col items-center justify-center cursor-pointer transition-all duration-300"
                 >
-                  <div className="bg-gradient-to-br from-green-200 to-green-300 w-full h-24 rounded mb-2 flex items-center justify-center">
+                  <div className="bg-gradient-to-br from-green-200 to-green-300 w-full h-24 mb-2 flex items-center justify-center">
                     <FaCog className="text-green-700 text-4xl" />
                   </div>
                   <p className="text-sm text-gray-700 text-center font-semibold">[생산시설 {item}]</p>
@@ -301,7 +304,7 @@ export default function ProgramDetailsSection() {
 
         {/* 연락처 */}
         <motion.div
-          className="bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white rounded-2xl shadow-2xl p-10 text-center relative overflow-hidden"
+          className="bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white p-10 text-center relative overflow-hidden"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -321,7 +324,7 @@ export default function ProgramDetailsSection() {
             <p className="text-2xl font-bold mb-6">이제 당신이 혜택을 보실차례입니다.</p>
 
             <motion.div
-              className="bg-white/20 backdrop-blur-sm rounded-xl p-6 inline-block"
+              className="bg-white/20 backdrop-blur-sm p-6 inline-block"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
             >

@@ -38,25 +38,6 @@ export default function HeroSection() {
                     JS
                   </p>
                 </div>
-
-                {/* Person Image Placeholder */}
-                {/* <div className="relative mt-8">
-                  <div className="flex items-end gap-4">
-                    <div className="relative">
-                      <div className="w-48 h-56 from-blue-100 to-blue-50 rounded-lg flex items-center justify-center border-2 border-blue-200">
-                        <div className="text-center">
-                          <svg className="w-24 h-24 text-blue-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                          </svg>
-                          <p className="text-sm text-gray-600 mt-2">대표 이미지</p>
-                        </div>
-                      </div>
-                      <div className="absolute -bottom-4 left-0 right-0 text-center">
-                        <p className="text-sm font-semibold text-gray-700">전화상담: 2시간 오전 ~2시간 오후</p>
-                      </div>
-                    </div>
-                  </div>
-                </div> */}
               </div>
             </div>
 

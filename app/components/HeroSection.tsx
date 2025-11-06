@@ -24,14 +24,7 @@ const heroSlides: HeroSlide[] = [
     description2: '중소기업과 소상공인 모두를 응원합니다!',
     bgImage: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop',
   },
-  {
-    id: 2,
-    title: '더욱 빠른 성장',
-    subtitle: '성공과 희망이 동반자',
-    description1: '중소기업지원센터는 중소 신생법인 힘에 대한민국의',
-    description2: '중소기업과 소상공인 모두를 응원합니다!',
-    bgImage: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop',
-  },
+
 ];
 
 export default function HeroSection() {

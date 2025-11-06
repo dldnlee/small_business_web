@@ -1,10 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ServiceCard from '../components/ServiceCard';
 import { services, getServicesByCategory } from '../data/services';
+import Link from 'next/link';
 
 export default function ServicePage() {
   const [activeCategory, setActiveCategory] = useState<'all' | 'corporate' | 'certification' | 'iso'>('all');
@@ -22,7 +22,6 @@ export default function ServicePage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Header />
       <div className="mx-auto w-full max-w-7xl flex flex-col">
         {/* Hero Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -80,12 +79,12 @@ export default function ServicePage() {
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
               귀사의 상황에 맞는 최적의 지원 방안을 제시해 드립니다
             </p>
-            <a
+            <Link
               href="/#contact"
               className="inline-block bg-white text-blue-600 font-bold px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
             >
               무료 상담 신청
-            </a>
+            </Link>
           </div>
         </section>
 

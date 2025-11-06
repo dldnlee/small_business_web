@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { CiMail } from 'react-icons/ci';
 
 interface HeroSlide {
   id: number;
@@ -159,13 +160,11 @@ export default function HeroSection() {
                 <div className="bg-white rounded-lg p-3">
                   <div className="flex items-center gap-3">
                     <div className="bg-blue-600 rounded-full p-2 shrink-0">
-                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                      </svg>
+                      <CiMail className="size-5"/>
                     </div>
                     <div className="flex-1">
-                      <p className="text-[10px] text-blue-600 font-medium">고객센터</p>
-                      <p className="text-lg font-bold text-blue-600 leading-tight">02-6933-8720</p>
+                      <p className="text-[10px] text-blue-600 font-medium">이메일</p>
+                      <p className="text-md font-bold text-blue-600 leading-tight">josephlee153@gmail.com</p>
                       <p className="text-[10px] text-gray-600">평일시간 09시~18시</p>
                     </div>
                   </div>
@@ -181,7 +180,7 @@ export default function HeroSection() {
                     </div>
                     <div className="flex-1">
                       <p className="text-[10px] text-blue-600 font-medium">빠른 상담</p>
-                      <p className="text-lg font-bold text-blue-600 leading-tight">M24hrc</p>
+                      <p className="text-md font-bold text-blue-600 leading-tight">jdlee0988</p>
                       <p className="text-[10px] text-gray-600">카카오톡으로 문의 상담</p>
                     </div>
                   </div>

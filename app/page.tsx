@@ -9,15 +9,15 @@ import ProgramDetailsSection from './components/ProgramDetailsSection';
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
-        <Header />
+      <Header />
       <div className='mx-auto w-full max-w-7xl flex flex-col'>
         <HeroSection />
         <GovernmentProgramsSection />
         <BusinessTypeSection />
         {/* <ProgramDetailsSection /> */}
         <ContactFormSection />
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 }

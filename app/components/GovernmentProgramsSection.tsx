@@ -5,6 +5,7 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import Link from 'next/link';
 
 interface FeatureIcon {
   id: number;
@@ -52,8 +53,8 @@ const featureIcons: FeatureIcon[] = [
 const programCards: ProgramCard[] = [
   {
     id: 1,
-    title: '소기업',
-    highlight: '운전자금',
+    title: '정부지원사업',
+    highlight: '',
     description: '기업의 원활하게 구매, 생산 판매 행을 수 기업의 운전자금을 지원합니다. 운전자금은 선강력히 활동을 유지하기 위해 필요한 자금입니다.',
     bgColor: 'bg-gray-600',
     bgImage: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop',
@@ -72,9 +73,9 @@ export default function GovernmentProgramsSection() {
   return (
     <section id="programs" className="py-0">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-0">
+        <div className="flex gap-0">
           {/* Left Sidebar */}
-          <div className="lg:col-span-3 bg-blue-700 text-white p-8 flex flex-col justify-between">
+          <div className="lg:col-span-3 bg-blue-700 text-white p-8 flex flex-col justify-between items-center">
             <div>
               <h2 className="text-2xl font-bold mb-8">정부정책자금</h2>
 
@@ -97,13 +98,10 @@ export default function GovernmentProgramsSection() {
             </div>
 
             {/* Bottom Buttons */}
-            <div className="space-y-3">
-              <button className="w-full bg-white text-blue-700 font-semibold py-3 px-4 rounded hover:bg-gray-100 transition-colors">
-                무료 상담 신청하기
-              </button>
-              {/* <button className="w-full bg-transparent border-2 border-white text-white font-semibold py-3 px-4 rounded hover:bg-white/10 transition-colors">
-                공식블로그 및 고객센터
-              </button> */}
+            <div className="w-full flex">
+              <Link href="/service" className="w-full text-center bg-white text-blue-700 font-semibold py-3 px-4 rounded hover:bg-gray-100 transition-colors">
+                전체 서비스 보기
+              </Link>
             </div>
           </div>
 

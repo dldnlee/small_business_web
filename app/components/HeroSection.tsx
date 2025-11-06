@@ -2,10 +2,9 @@
 
 import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import 'swiper/css/navigation';
 
 interface HeroSlide {
   id: number;
@@ -48,13 +47,13 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="pt-18 pb-0 bg-gray-50 w-full">
+    <section className="pb-0 bg-gray-50 w-full">
       <div className="">
         <div className="flex flex-col lg:flex-row">
           {/* Left Side - Swiper Content */}
           <div className="bg-white w-full lg:flex-1 overflow-hidden">
             <Swiper
-              modules={[Autoplay, Pagination, Navigation]}
+              modules={[Autoplay, Pagination]}
               spaceBetween={0}
               slidesPerView={1}
               autoplay={{

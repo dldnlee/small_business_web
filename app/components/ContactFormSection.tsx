@@ -10,11 +10,7 @@ export default function ContactFormSection() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-white text-black relative overflow-hidden">
-      {/* Background Decorative Elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100 rounded-full opacity-20 blur-3xl -mr-48 -mt-48"></div>
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-100 rounded-full opacity-20 blur-3xl -ml-40 -mb-40"></div>
-
+    <section id="contact" className="bg-white text-black overflow-hidden pb-20">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <motion.div
@@ -22,9 +18,9 @@ export default function ContactFormSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-8"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-blue-600 bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-4xl font-bold mb-2 bg-blue-600 bg-clip-text text-transparent">
             빠른 상담 신청 서비스
           </h2>
           <p className="text-gray-600 text-lg">
@@ -188,12 +184,6 @@ export default function ContactFormSection() {
             </div>
           </div>
         </motion.div>
-
-        <div className="mt-12 text-center">
-          <h3 className="text-2xl font-bold mb-6 text-gray-800">
-            2025년 정부정책자금 예산 편성, 정부정책자금 온전자금 및 사업자금 신청 및 상담
-          </h3>
-        </div>
       </div>
     </section>
   );

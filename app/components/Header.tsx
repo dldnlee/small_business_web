@@ -1,25 +1,28 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
+    <header className="sticky top-0 left-0 right-0 bg-white shadow-sm z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <h1 className="text-xl sm:text-2xl font-bold text-blue-900">중기기업지원단</h1>
+            <Link href="/">
+              <h1 className="text-xl sm:text-2xl font-bold text-blue-900 cursor-pointer hover:text-blue-700 transition-colors">중기기업지원단</h1>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
-          {/* <nav className="hidden md:flex space-x-8">
-            <a href="#programs" className="text-gray-700 hover:text-blue-600 transition-colors">정부정책자금</a>
-            <a href="#services" className="text-gray-700 hover:text-blue-600 transition-colors">법인지원</a>
-            <a href="#consulting" className="text-gray-700 hover:text-blue-600 transition-colors">기업인증</a>
-            <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">ISO(4스탭인증)</a>
-          </nav> */}
+          <nav className="hidden md:flex space-x-8">
+            <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors">홈</Link>
+            <Link href="/service" className="text-gray-700 hover:text-blue-600 transition-colors">서비스</Link>
+            <Link href="/#programs" className="text-gray-700 hover:text-blue-600 transition-colors">정부정책자금</Link>
+            <Link href="/#contact" className="text-gray-700 hover:text-blue-600 transition-colors">상담신청</Link>
+          </nav>
 
           {/* Mobile Menu Button */}
           <button
@@ -40,12 +43,12 @@ export default function Header() {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t">
-          {/* <nav className="px-4 pt-2 pb-4 space-y-2">
-            <a href="#programs" className="block py-2 text-gray-700 hover:text-blue-600">정부정책자금</a>
-            <a href="#services" className="block py-2 text-gray-700 hover:text-blue-600">법인지원</a>
-            <a href="#consulting" className="block py-2 text-gray-700 hover:text-blue-600">기업인증</a>
-            <a href="#contact" className="block py-2 text-gray-700 hover:text-blue-600">ISO(4스탭인증)</a>
-          </nav> */}
+          <nav className="px-4 pt-2 pb-4 space-y-2">
+            <Link href="/" className="block py-2 text-gray-700 hover:text-blue-600">홈</Link>
+            <Link href="/service" className="block py-2 text-gray-700 hover:text-blue-600">서비스</Link>
+            <Link href="/#programs" className="block py-2 text-gray-700 hover:text-blue-600">정부정책자금</Link>
+            <Link href="/#contact" className="block py-2 text-gray-700 hover:text-blue-600">상담신청</Link>
+          </nav>
         </div>
       )}
     </header>

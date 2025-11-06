@@ -13,6 +13,7 @@ import {
   FaArrowLeft
 } from 'react-icons/fa';
 import { IoMdFlame } from 'react-icons/io';
+import Image from 'next/image';
 
 const fadeIn = {
   initial: { opacity: 0 },
@@ -75,6 +76,19 @@ export default function HeatRecovery() {
             <FaRecycle className="text-orange-600 text-3xl mb-3" />
             <h3 className="font-semibold text-gray-900 mb-2">높은 절감률</h3>
             <p className="text-gray-700">폐수열회수를 통해 <span className="font-bold text-orange-600">연간 40% 이상</span> 비용 절감</p>
+          </div>
+        </div>
+
+        {/* 에너지 절감 그래프 */}
+        <div className="mt-8 bg-white p-6 rounded-xl shadow-sm">
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">에너지 절감 효과</h3>
+          <div className="relative w-full aspect-video">
+            <Image
+              src="/pictures/graph.png"
+              alt="에너지 절감 효과 그래프"
+              fill
+              className="object-contain"
+            />
           </div>
         </div>
       </motion.div>
@@ -141,6 +155,19 @@ export default function HeatRecovery() {
             </div>
           </div>
         </div>
+
+        {/* 시스템 작동 이미지 */}
+        <div className="mt-8 bg-gray-50 p-6 rounded-xl">
+          <h3 className="text-lg font-semibold text-gray-900 mb-4 text-center">시스템 구성도</h3>
+          <div className="relative w-full aspect-video">
+            <Image
+              src="/pictures/functionality.png"
+              alt="폐수열회수 시스템 구성도"
+              fill
+              className="object-contain"
+            />
+          </div>
+        </div>
       </motion.div>
 
       {/* 인증 및 신뢰성 */}
@@ -178,6 +205,19 @@ export default function HeatRecovery() {
             <p className="text-sm text-gray-600">다수의 사우나 업체 설치 완료</p>
           </div>
         </div>
+
+        {/* 인증서 이미지 */}
+        <div className="bg-gray-50 p-6 rounded-xl">
+          <h3 className="text-lg font-semibold text-gray-900 mb-4 text-center">공식 인증서</h3>
+          <div className="relative w-full aspect-video">
+            <Image
+              src="/pictures/certificates.png"
+              alt="제품 인증서"
+              fill
+              className="object-contain"
+            />
+          </div>
+        </div>
       </motion.div>
 
       {/* 주요 적용 대상 */}
@@ -206,6 +246,43 @@ export default function HeatRecovery() {
           <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm p-4 rounded-xl">
             <FaCheckCircle className="text-blue-200 text-xl shrink-0" />
             <span>상업용 세탁시설</span>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* 설치 사례 */}
+      <motion.div
+        className="bg-white p-8 rounded-2xl shadow-md mb-8"
+        {...fadeIn}
+      >
+        <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+          <FaCheckCircle className="text-green-600" />
+          설치 사례
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="bg-gray-50 p-4 rounded-xl">
+            <div className="relative w-full aspect-video mb-3">
+              <Image
+                src="/pictures/example_one.png"
+                alt="설치 사례 1"
+                fill
+                className="object-cover rounded-lg"
+              />
+            </div>
+            <h3 className="font-semibold text-gray-900 text-center">설치 사례 1</h3>
+          </div>
+
+          <div className="bg-gray-50 p-4 rounded-xl">
+            <div className="relative w-full aspect-video mb-3">
+              <Image
+                src="/pictures/example_two.png"
+                alt="설치 사례 2"
+                fill
+                className="object-cover rounded-lg"
+              />
+            </div>
+            <h3 className="font-semibold text-gray-900 text-center">설치 사례 2</h3>
           </div>
         </div>
       </motion.div>

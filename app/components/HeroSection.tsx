@@ -2,9 +2,38 @@
 
 import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+interface HeroSlide {
+  id: number;
+  title: string;
+  subtitle: string;
+  description1: string;
+  description2: string;
+  bgImage?: string;
+}
+
+const heroSlides: HeroSlide[] = [
+  {
+    id: 1,
+    title: '중기기업지원단',
+    subtitle: '성공과 희망이 동반자',
+    description1: '중소기업지원센터는 중소 신생법인 힘에 대한민국의',
+    description2: '중소기업과 소상공인 모두를 응원합니다!',
+    bgImage: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop',
+  },
+  {
+    id: 2,
+    title: '중기기업지원단',
+    subtitle: '성공과 희망이 동반자',
+    description1: '중소기업지원센터는 중소 신생법인 힘에 대한민국의',
+    description2: '중소기업과 소상공인 모두를 응원합니다!',
+    bgImage: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop',
+  },
+];
 
 export default function HeroSection() {
   const [formData, setFormData] = useState({
@@ -19,13 +48,13 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative pt-18 pb-0 bg-gray-50 w-full">
-      <div className="bg-black">
+    <section className="pt-18 pb-0 bg-gray-50 w-full">
+      <div className="">
         <div className="flex flex-col lg:flex-row">
           {/* Left Side - Swiper Content */}
-          <div className="w-full lg:flex-1 bg-white px-8 sm:px-12 md:px-20 py-12 lg:py-16 flex flex-col justify-center">
+          <div className="bg-white w-full lg:flex-1 overflow-hidden">
             <Swiper
-              modules={[Autoplay, Pagination]}
+              modules={[Autoplay, Pagination, Navigation]}
               spaceBetween={0}
               slidesPerView={1}
               autoplay={{
@@ -37,69 +66,46 @@ export default function HeroSection() {
               }}
               navigation={true}
               loop={true}
-              className="w-full max-w-3xl mx-auto"
+              className="w-full h-full"
             >
-              <SwiperSlide>
-                <div className="space-y-6">
-                  <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight">
-                    중기기업지원단
-                  </h1>
-                  <div className="space-y-2">
-                    <p className="text-lg text-gray-800">
-                      중소기업의 <span className="text-blue-600 font-semibold">성공과 희망이 동반자</span>.
-                    </p>
-                    <p className="text-base text-gray-700">
-                      중소기업지원센터는 중소 신생법인 힘에 대한민국의
-                    </p>
-                    <p className="text-base text-gray-700">
-                      중소기업과 소상공인 모두를 응원합니다!
-                    </p>
-                  </div>
-                </div>
-              </SwiperSlide>
+              {heroSlides.map((slide) => (
+                <SwiperSlide key={slide.id}>
+                  <div className="relative w-full h-full min-h-[400px]">
+                    {/* Background Image */}
+                    {slide.bgImage && (
+                      <div
+                        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                        style={{ backgroundImage: `url(${slide.bgImage})` }}
+                      />
+                    )}
+                    {/* Overlay for better text readability */}
+                    <div className="absolute inset-0 bg-white/80"></div>
 
-              <SwiperSlide>
-                <div className="space-y-6">
-                  <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight">
-                    맞춤형 지원 프로그램
-                  </h1>
-                  <div className="space-y-2">
-                    <p className="text-lg text-gray-800">
-                      귀사의 성장을 위한 <span className="text-blue-600 font-semibold">최적의 솔루션</span>
-                    </p>
-                    <p className="text-base text-gray-700">
-                      창업부터 성장까지 단계별 맞춤 지원
-                    </p>
-                    <p className="text-base text-gray-700">
-                      전문 컨설턴트가 함께합니다
-                    </p>
+                    {/* Content */}
+                    <div className="relative space-y-6 p-20">
+                      <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight">
+                        {slide.title}
+                      </h1>
+                      <div className="space-y-2">
+                        <p className="text-lg text-gray-800">
+                          중소기업의 <span className="text-blue-600 font-semibold">{slide.subtitle}</span>.
+                        </p>
+                        <p className="text-base text-gray-700">
+                          {slide.description1}
+                        </p>
+                        <p className="text-base text-gray-700">
+                          {slide.description2}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className="space-y-6">
-                  <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight">
-                    신속한 지원 절차
-                  </h1>
-                  <div className="space-y-2">
-                    <p className="text-lg text-gray-800">
-                      <span className="text-blue-600 font-semibold">빠르고 간편한</span> 신청 프로세스
-                    </p>
-                    <p className="text-base text-gray-700">
-                      온라인 상담 신청 후 24시간 내 연락
-                    </p>
-                    <p className="text-base text-gray-700">
-                      지금 바로 시작하세요!
-                    </p>
-                  </div>
-                </div>
-              </SwiperSlide>
+                </SwiperSlide>
+              ))}
             </Swiper>
           </div>
 
           {/* Right Side - Contact Form */}
-          <div className="bg-blue-600 px-6 py-8 text-white w-full">
+          <div className="bg-blue-600 px-6 py-8 text-white max-w-md">
             <div className="flex flex-col h-full">
               <h3 className="text-xl font-bold mb-5 text-center">빠른 상담신청</h3>
 

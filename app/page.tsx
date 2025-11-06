@@ -8,9 +8,9 @@ import ProgramDetailsSection from './components/ProgramDetailsSection';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
         <Header />
-      <div className='mx-auto w-full bg-black max-w-7xl'>
+      <div className='mx-auto w-full max-w-7xl flex flex-col'>
         <HeroSection />
         <GovernmentProgramsSection />
         <ProgramDetailsSection />

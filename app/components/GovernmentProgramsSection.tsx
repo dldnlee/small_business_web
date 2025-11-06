@@ -1,3 +1,39 @@
+'use client';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+interface ProgramCard {
+  id: number;
+  title: string;
+  highlight: string;
+  description: string;
+  bgColor: string;
+  bgImage?: string;
+}
+
+const programCards: ProgramCard[] = [
+  {
+    id: 1,
+    title: '소기업',
+    highlight: '운전자금',
+    description: '기업의 원활하게 구매, 생산 판매 행을 수 기업의 운전자금을 지원합니다. 운전자금은 선강력히 활동을 유지하기 위해 필요한 자금입니다.',
+    bgColor: 'bg-gray-600',
+    bgImage: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop',
+  },
+  {
+    id: 3,
+    title: '중기업',
+    highlight: '문전자금',
+    description: '기업의 원활하게 구매, 생산 판매 행을 수 기업의 운전자금을 지원합니다. 운전자금은 선강력히 활동을 유지하기 위해 필요한 자금입니다.',
+    bgColor: 'bg-gray-700',
+    bgImage: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop',
+  },
+];
+
 export default function GovernmentProgramsSection() {
   return (
     <section id="programs" className="py-0">
@@ -55,90 +91,67 @@ export default function GovernmentProgramsSection() {
             {/* Bottom Buttons */}
             <div className="space-y-3">
               <button className="w-full bg-white text-blue-700 font-semibold py-3 px-4 rounded hover:bg-gray-100 transition-colors">
-                고객센터 바로가기
+                무료 상담 신청하기
               </button>
-              <button className="w-full bg-transparent border-2 border-white text-white font-semibold py-3 px-4 rounded hover:bg-white/10 transition-colors">
+              {/* <button className="w-full bg-transparent border-2 border-white text-white font-semibold py-3 px-4 rounded hover:bg-white/10 transition-colors">
                 공식블로그 및 고객센터
-              </button>
+              </button> */}
             </div>
           </div>
 
-          {/* Right Content - 3 Cards */}
-          <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-0">
-            {/* Card 1 - 소기업 운전자금 */}
-            <div className="relative h-64 md:h-auto overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70"></div>
-              <div className="absolute inset-0 bg-gray-600 flex items-center justify-center">
-                <svg className="w-20 h-20 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <div className="relative h-full p-6 flex flex-col justify-between text-white">
-                <div>
-                  <h3 className="text-xl font-bold mb-3">
-                    소기업 <span className="text-yellow-400">운전자금</span>
-                  </h3>
-                  <p className="text-sm leading-relaxed">
-                    기업의 원활하게 구매, 생산 판매 행을 수 기업의 운
-                    전자금을 지원합니다. 운전자금은 선강력히 활동을
-                    유지하기 위해 필요한 자금입니다.
-                  </p>
-                </div>
-                <button className="mt-4 inline-flex items-center text-sm font-semibold text-white bg-blue-600 px-6 py-2 rounded hover:bg-blue-700 transition-colors self-start">
-                  <span className="mr-1">⊕</span> 세부내역
-                </button>
-              </div>
-            </div>
-
-            {/* Card 2 - 소기업 문전자금 */}
-            <div className="relative h-64 md:h-auto overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70"></div>
-              <div className="absolute inset-0 bg-gray-500 flex items-center justify-center">
-                <svg className="w-20 h-20 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <div className="relative h-full p-6 flex flex-col justify-between text-white">
-                <div>
-                  <h3 className="text-xl font-bold mb-3">
-                    소기업 <span className="text-yellow-400">문전자금</span>
-                  </h3>
-                  <p className="text-sm leading-relaxed">
-                    기업의 원활하게 구매, 생산 판매 행을 수 기업의 운
-                    전자금을 지원합니다. 운전자금은 선강력히 활동을
-                    유지하기 위해 필요한 자금입니다.
-                  </p>
-                </div>
-                <button className="mt-4 inline-flex items-center text-sm font-semibold text-white bg-blue-600 px-6 py-2 rounded hover:bg-blue-700 transition-colors self-start">
-                  <span className="mr-1">⊕</span> 세부내역
-                </button>
-              </div>
-            </div>
-
-            {/* Card 3 - 중기업 문전자금 */}
-            <div className="relative h-64 md:h-auto overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70"></div>
-              <div className="absolute inset-0 bg-gray-700 flex items-center justify-center">
-                <svg className="w-20 h-20 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <div className="relative h-full p-6 flex flex-col justify-between text-white">
-                <div>
-                  <h3 className="text-xl font-bold mb-3">
-                    중기업 <span className="text-yellow-400">문전자금</span>
-                  </h3>
-                  <p className="text-sm leading-relaxed">
-                    기업의 원활하게 구매, 생산 판매 행을 수 기업의 운
-                    전자금을 지원합니다. 운전자금은 선강력히 활동을
-                    유지하기 위해 필요한 자금입니다.
-                  </p>
-                </div>
-                <button className="mt-4 inline-flex items-center text-sm font-semibold text-white bg-blue-600 px-6 py-2 rounded hover:bg-blue-700 transition-colors self-start">
-                  <span className="mr-1">⊕</span> 세부내역
-                </button>
-              </div>
-            </div>
+          {/* Right Content - Swiper Cards */}
+          <div className="lg:col-span-3 w-full overflow-hidden">
+            <Swiper
+              modules={[Autoplay, Pagination]}
+              spaceBetween={0}
+              slidesPerView={1}
+              autoplay={{
+                delay: 4000,
+                disableOnInteraction: false,
+              }}
+              pagination={{
+                clickable: true,
+              }}
+              navigation={true}
+              loop={true}
+              className="w-full"
+              style={{ height: '100%', minHeight: '400px' }}
+            >
+              {programCards.map((card) => (
+                <SwiperSlide key={card.id}>
+                  <div className="relative w-full h-full min-h-[400px] overflow-hidden group">
+                    {/* Background Image */}
+                    {card.bgImage ? (
+                      <div
+                        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                        style={{ backgroundImage: `url(${card.bgImage})` }}
+                      />
+                    ) : (
+                      <div className={`absolute inset-0 ${card.bgColor} flex items-center justify-center`}>
+                        <svg className="w-20 h-20 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                      </div>
+                    )}
+                    {/* Dark Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70"></div>
+                    <div className="relative h-full p-6 flex flex-col justify-between text-white">
+                      <div>
+                        <h3 className="text-xl font-bold mb-3">
+                          {card.title} <span className="text-yellow-400">{card.highlight}</span>
+                        </h3>
+                        <p className="text-sm leading-relaxed">
+                          {card.description}
+                        </p>
+                      </div>
+                      <button className="mt-4 inline-flex items-center text-sm font-semibold text-white bg-blue-600 px-6 py-2 rounded hover:bg-blue-700 transition-colors self-start">
+                        <span className="mr-1">⊕</span> 세부내역
+                      </button>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
       </div>

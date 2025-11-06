@@ -10,7 +10,7 @@ export default function BusinessTypeSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            중소기업지원센터 인증 서비스
+            중소기업지원센터 인증 서비스 안내
           </h2>
         </div>
 
@@ -72,9 +72,6 @@ export default function BusinessTypeSection() {
                 <p className="text-sm text-gray-600">
                   법인 설립 절차 및 필요 서류를 안내합니다
                 </p>
-                <div className="pt-2 text-red-500 text-sm font-semibold cursor-pointer hover:underline">
-                  자세히 보기 &gt;
-                </div>
               </div>
             </div>
 
@@ -92,9 +89,6 @@ export default function BusinessTypeSection() {
                 <p className="text-sm text-gray-600">
                   법인 사업자를 위한 자금 지원 프로그램
                 </p>
-                <div className="pt-2 text-red-500 text-sm font-semibold cursor-pointer hover:underline">
-                  자세히 보기 &gt;
-                </div>
               </div>
             </div>
 
@@ -112,9 +106,6 @@ export default function BusinessTypeSection() {
                 <p className="text-sm text-gray-600">
                   법인 세무 및 회계 전문 컨설팅 서비스
                 </p>
-                <div className="pt-2 text-red-500 text-sm font-semibold cursor-pointer hover:underline">
-                  자세히 보기 &gt;
-                </div>
               </div>
             </div>
           </div>
@@ -136,9 +127,6 @@ export default function BusinessTypeSection() {
                 <p className="text-sm text-gray-600">
                   재무개선 및 가치금융을 자세하게 안내합니다
                 </p>
-                <div className="pt-2 text-red-500 text-sm font-semibold cursor-pointer hover:underline">
-                  자세히 보기 &gt;
-                </div>
               </div>
             </div>
 
@@ -156,9 +144,6 @@ export default function BusinessTypeSection() {
                 <p className="text-sm text-gray-600">
                   특허의 종합한 비무 판정 등의 사업의 기술을 안내합니다
                 </p>
-                <div className="pt-2 text-red-500 text-sm font-semibold cursor-pointer hover:underline">
-                  자세히 보기 &gt;
-                </div>
               </div>
             </div>
 
@@ -176,9 +161,6 @@ export default function BusinessTypeSection() {
                 <p className="text-sm text-gray-600">
                   법인사업자의 사업 변경과 업태 변경을 자세하게 안내합니다
                 </p>
-                <div className="pt-2 text-red-500 text-sm font-semibold cursor-pointer hover:underline">
-                  자세히 보기 &gt;
-                </div>
               </div>
             </div>
           </div>
@@ -200,9 +182,6 @@ export default function BusinessTypeSection() {
                 <p className="text-sm text-gray-600">
                   품질경영시스템 ISO 9001 인증 지원
                 </p>
-                <div className="pt-2 text-red-500 text-sm font-semibold cursor-pointer hover:underline">
-                  자세히 보기 &gt;
-                </div>
               </div>
             </div>
 
@@ -220,9 +199,6 @@ export default function BusinessTypeSection() {
                 <p className="text-sm text-gray-600">
                   환경경영시스템 ISO 14001 인증 지원
                 </p>
-                <div className="pt-2 text-red-500 text-sm font-semibold cursor-pointer hover:underline">
-                  자세히 보기 &gt;
-                </div>
               </div>
             </div>
 
@@ -240,9 +216,6 @@ export default function BusinessTypeSection() {
                 <p className="text-sm text-gray-600">
                   스마트공장 구축 및 인증 컨설팅
                 </p>
-                <div className="pt-2 text-red-500 text-sm font-semibold cursor-pointer hover:underline">
-                  자세히 보기 &gt;
-                </div>
               </div>
             </div>
           </div>

@@ -27,7 +27,7 @@ const heroSlides: HeroSlide[] = [
   },
   {
     id: 2,
-    title: '중기기업지원단',
+    title: '더욱 빠른 성장',
     subtitle: '성공과 희망이 동반자',
     description1: '중소기업지원센터는 중소 신생법인 힘에 대한민국의',
     description2: '중소기업과 소상공인 모두를 응원합니다!',
@@ -126,11 +126,7 @@ export default function HeroSection() {
                   <div className="flex gap-1 flex-1">
                     <select className="px-2 py-2 rounded text-gray-900 text-sm focus:ring-2 focus:ring-blue-300 focus:outline-none bg-white">
                       <option>010</option>
-                      <option>011</option>
-                      <option>016</option>
-                      <option>017</option>
-                      <option>018</option>
-                      <option>019</option>
+                      <option>02</option>
                     </select>
                     <span className="text-white self-center">-</span>
                     <input
@@ -139,16 +135,6 @@ export default function HeroSection() {
                       maxLength={4}
                       className="flex-1 px-2 bg-white py-2 rounded text-gray-900 text-sm focus:ring-2 focus:ring-blue-300 focus:outline-none text-center"
                       placeholder=""
-                    />
-                    <span className="text-white self-center">-</span>
-                    <input
-                      type="tel"
-                      required
-                      maxLength={4}
-                      className="flex-1 px-2 py-2 rounded text-gray-900 text-sm focus:ring-2 focus:ring-blue-300 focus:outline-none text-center"
-                      placeholder=""
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     />
                   </div>
                 </div>
@@ -169,9 +155,9 @@ export default function HeroSection() {
 
                 <button
                   type="submit"
-                  className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2.5 px-6 rounded transition-colors text-sm"
+                  className="w-full bg-yellow-500 text-white font-bold py-2.5 px-6 rounded transition-colors text-sm"
                 >
-                  문의하기
+                  상담 신청하기
                 </button>
               </form>
 

@@ -24,7 +24,7 @@ export default function ContactFormSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-blue-600 bg-clip-text text-transparent">
             빠른 상담 신청 서비스
           </h2>
           <p className="text-gray-600 text-lg">
@@ -42,7 +42,7 @@ export default function ContactFormSection() {
         >
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
             {/* Left Side - Phone Information */}
-            <div className="bg-linear-to-br from-blue-600 to-purple-600 p-8 md:p-10 text-white flex flex-col justify-center items-center lg:items-start">
+            <div className="bg-blue-600 p-8 md:p-10 text-white flex flex-col justify-center items-center lg:items-start">
               <motion.div
                 initial={{ scale: 0.8, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
@@ -176,7 +176,7 @@ export default function ContactFormSection() {
                 type="submit"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-12 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:from-blue-700 hover:to-purple-700"
+                className="px-12 py-4 bg-blue-600 text-white font-bold text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:from-blue-700 hover:to-purple-700"
               >
                 <span className="flex items-center gap-2 justify-center">
                   <FaPhone className="text-xl" />

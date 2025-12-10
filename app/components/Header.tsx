@@ -19,8 +19,8 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors">홈</Link>
-            <Link href="/service" className="text-gray-700 hover:text-blue-600 transition-colors">서비스</Link>
-            <Link href="/#programs" className="text-gray-700 hover:text-blue-600 transition-colors">정부정책자금</Link>
+            <Link href="/service/heat-recovery" className="text-gray-700 hover:text-blue-600 transition-colors">세부내용</Link>
+            {/* <Link href="/#programs" className="text-gray-700 hover:text-blue-600 transition-colors">정부정책자금</Link> */}
             <Link href="/#contact" className="text-gray-700 hover:text-blue-600 transition-colors">상담신청</Link>
           </nav>
 

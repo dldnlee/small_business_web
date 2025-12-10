@@ -12,7 +12,7 @@ export default function Home() {
         <HeroSection />
 
         {/* Attention Banner */}
-        <div className="bg-red-600 text-white py-6 px-4 md:px-8 rounded-lg shadow-lg">
+        <div className="bg-red-600 text-white py-6 px-4 md:px-8 ">
           <div className="text-center space-y-2">
             <p className="text-xl md:text-2xl font-bold">
               스포츠센터, 찜질방, 사우나 업체사장님들

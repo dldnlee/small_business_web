@@ -11,7 +11,7 @@ export default function ContactFormSection() {
 
   return (
     <section id="contact" className="bg-white text-black overflow-hidden pb-20 pt-10">
-      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="w-full mx-auto relative z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -34,7 +34,7 @@ export default function ContactFormSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-white/90 rounded-3xl shadow-2xl backdrop-blur-sm border border-gray-100 overflow-hidden"
+          className="bg-white/90 shadow-2xl backdrop-blur-sm border border-gray-100 overflow-hidden"
         >
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
             {/* Left Side - Phone Information */}

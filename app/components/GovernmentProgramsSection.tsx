@@ -9,7 +9,7 @@ export default function GovernmentProgramsSection() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-0">
           {/* Left Sidebar */}
-          <div className="lg:w-2/5 bg-white text-blue-700 flex border flex-col justify-center items-center p-6 sm:p-8 lg:p-10">
+          <div className="lg:w-2/5 bg-white text-blue-700 flex flex-col justify-center items-center p-6 sm:p-8 lg:p-10">
             <div className="text-base sm:text-lg leading-relaxed">
               <p className="text-blue-900">
                 정부지원사업 참여 - 내자금 10% 정부자금 90%로<br className="hidden sm:block" />

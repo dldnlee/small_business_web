@@ -1,32 +1,15 @@
 'use client';
 
 import { useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
 import { CiMail } from 'react-icons/ci';
 
-interface HeroSlide {
-  id: number;
-  title: string;
-  subtitle: string;
-  description1: string;
-  description2: string;
-  bgImage?: string;
-}
-
-const heroSlides: HeroSlide[] = [
-  {
-    id: 1,
-    title: '제이에스에너지',
-    subtitle: '성공과 희망이 동반자',
-    description1: '사우나업체의 에너지비용을 최소40%이상 절감해드립니다.',
-    description2: '에너지절감기 설치비용90% 융자(서울시 무이자 , 경기도 1.5% )',
-    bgImage: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop',
-  },
-
-];
+const heroContent = {
+  title: '제이에스에너지',
+  subtitle: '성공과 희망이 동반자',
+  description1: '사우나업체의 에너지비용을 최소40%이상 절감해드립니다.',
+  description2: '에너지절감기 설치비용90% 융자(서울시 무이자 , 경기도 1.5% )',
+  bgImage: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=2070&auto=format&fit=crop',
+};
 
 export default function HeroSection() {
   const [formData, setFormData] = useState({
@@ -44,57 +27,35 @@ export default function HeroSection() {
     <section className="pb-0 bg-gray-50 w-full">
       <div className="">
         <div className="flex flex-col lg:flex-row">
-          {/* Left Side - Swiper Content */}
+          {/* Left Side - Hero Content */}
           <div className="bg-white w-full lg:flex-1 overflow-hidden">
-            <Swiper
-              modules={[Autoplay, Pagination]}
-              spaceBetween={0}
-              slidesPerView={1}
-              autoplay={{
-                delay: 5000,
-                disableOnInteraction: false,
-              }}
-              pagination={{
-                clickable: true,
-              }}
-              navigation={true}
-              loop={true}
-              className="w-full h-full"
-            >
-              {heroSlides.map((slide) => (
-                <SwiperSlide key={slide.id}>
-                  <div className="relative w-full h-full min-h-[400px]">
-                    {/* Background Image */}
-                    {slide.bgImage && (
-                      <div
-                        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                        style={{ backgroundImage: `url(${slide.bgImage})` }}
-                      />
-                    )}
-                    {/* Overlay for better text readability */}
-                    <div className="absolute inset-0 bg-white/80"></div>
+            <div className="relative w-full h-full min-h-[400px]">
+              {/* Background Image */}
+              <div
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: `url(${heroContent.bgImage})` }}
+              />
+              {/* Overlay for better text readability */}
+              <div className="absolute inset-0 bg-white/80"></div>
 
-                    {/* Content */}
-                    <div className="relative space-y-6 p-20">
-                      <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight">
-                        {slide.title}
-                      </h1>
-                      <div className="space-y-2">
-                        <p className="text-xl text-gray-800">
-                          사우나의 <span className="text-blue-600 font-semibold">{slide.subtitle}</span>.
-                        </p>
-                        <p className="text-xl text-gray-700">
-                          {slide.description1}
-                        </p>
-                        <p className="text-xl text-gray-700">
-                          {slide.description2}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
+              {/* Content */}
+              <div className="relative space-y-6 p-20">
+                <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight">
+                  {heroContent.title}
+                </h1>
+                <div className="space-y-2">
+                  <p className="text-xl text-gray-800">
+                    사우나의 <span className="text-blue-600 font-semibold">{heroContent.subtitle}</span>.
+                  </p>
+                  <p className="text-xl text-gray-700">
+                    {heroContent.description1}
+                  </p>
+                  <p className="text-xl text-gray-700">
+                    {heroContent.description2}
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Right Side - Contact Form */}

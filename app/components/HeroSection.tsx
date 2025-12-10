@@ -36,21 +36,21 @@ export default function HeroSection() {
                 style={{ backgroundImage: `url(${heroContent.bgImage})` }}
               />
               {/* Overlay for better text readability */}
-              <div className="absolute inset-0 bg-white/80"></div>
+              <div className="absolute inset-0 bg-black/70"></div>
 
               {/* Content */}
               <div className="relative space-y-6 p-20">
-                <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight">
+                <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight">
                   {heroContent.title}
                 </h1>
                 <div className="space-y-2">
-                  <p className="text-xl text-gray-800">
-                    사우나의 <span className="text-blue-600 font-semibold">{heroContent.subtitle}</span>.
+                  <p className="text-xl text-white">
+                    사우나의 <span className="text-blue-400 font-semibold">{heroContent.subtitle}</span>.
                   </p>
-                  <p className="text-xl text-gray-700">
+                  <p className="text-xl text-white">
                     {heroContent.description1}
                   </p>
-                  <p className="text-xl text-gray-700">
+                  <p className="text-xl text-white">
                     {heroContent.description2}
                   </p>
                 </div>

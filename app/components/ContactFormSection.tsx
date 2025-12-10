@@ -54,7 +54,7 @@ export default function ContactFormSection() {
 
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-6 border border-white/20">
                   <p className="text-sm text-blue-100 mb-2">담당자</p>
-                  <p className="text-lg font-semibold mb-4">성무이사 이종두</p>
+                  <p className="text-lg font-semibold mb-4">상무이사 이종두</p>
                   <div className="flex items-center justify-center lg:justify-start gap-3 bg-white/20 rounded-xl p-4">
                     <FaPhone className="text-3xl text-yellow-300" />
                     <div>

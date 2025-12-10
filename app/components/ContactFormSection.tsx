@@ -33,10 +33,10 @@ export default function ContactFormSection() {
                   답변해 드립니다
                 </p>
 
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-5 mb-5 border border-white/20">
+                <div className="bg-white/10 backdrop-blur-sm p-5 mb-5 border border-white/20">
                   <p className="text-base text-blue-100 mb-2">담당자</p>
                   <p className="text-2xl font-semibold mb-3">상무이사 이종두</p>
-                  <div className="flex items-center justify-center lg:justify-start gap-3 bg-white/20 rounded-xl p-4">
+                  <div className="flex items-center justify-center lg:justify-start gap-3 bg-white/20 p-4">
                     <FaPhone className="text-4xl text-yellow-300" />
                     <div>
                       <p className="text-base text-blue-100">연락처</p>
@@ -47,15 +47,15 @@ export default function ContactFormSection() {
 
                 <div className="space-y-2 text-base text-blue-100">
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-yellow-300 rounded-full"></div>
+                    <div className="w-2 h-2 bg-yellow-300"></div>
                     <span>평일 09:00 - 18:00</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-yellow-300 rounded-full"></div>
+                    <div className="w-2 h-2 bg-yellow-300"></div>
                     <span>주말 및 공휴일 휴무</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-yellow-300 rounded-full"></div>
+                    <div className="w-2 h-2 bg-yellow-300"></div>
                     <span>24시간 온라인 상담 접수</span>
                   </div>
                 </div>
@@ -76,7 +76,7 @@ export default function ContactFormSection() {
                   type="text"
                   required
                   placeholder="홍길동"
-                  className="w-full px-4 py-3 bg-gray-50 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:bg-white transition-all duration-300 text-gray-800 placeholder-gray-400 text-base"
+                  className="w-full px-4 py-3 bg-gray-50 border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:bg-white transition-all duration-300 text-gray-800 placeholder-gray-400 text-base"
                 />
               </div>
 
@@ -90,7 +90,7 @@ export default function ContactFormSection() {
                   type="tel"
                   required
                   placeholder="010-1234-5678"
-                  className="w-full px-4 py-3 bg-gray-50 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:bg-white transition-all duration-300 text-gray-800 placeholder-gray-400 text-base"
+                  className="w-full px-4 py-3 bg-gray-50 border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:bg-white transition-all duration-300 text-gray-800 placeholder-gray-400 text-base"
                 />
               </div>
             </div>
@@ -104,7 +104,7 @@ export default function ContactFormSection() {
               <input
                 type="email"
                 placeholder="example@email.com"
-                className="w-full px-4 py-3 bg-gray-50 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:bg-white transition-all duration-300 text-gray-800 placeholder-gray-400 text-base"
+                className="w-full px-4 py-3 bg-gray-50 border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:bg-white transition-all duration-300 text-gray-800 placeholder-gray-400 text-base"
               />
             </div>
 
@@ -116,17 +116,17 @@ export default function ContactFormSection() {
               <textarea
                 rows={4}
                 placeholder="상담받고 싶은 내용을 자유롭게 작성해주세요"
-                className="w-full px-4 py-3 bg-gray-50 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:bg-white transition-all duration-300 text-gray-800 placeholder-gray-400 resize-none text-base"
+                className="w-full px-4 py-3 bg-gray-50 border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:bg-white transition-all duration-300 text-gray-800 placeholder-gray-400 resize-none text-base"
               />
             </div>
 
             {/* Privacy Agreement */}
-            <div className="flex items-start gap-3 p-3 bg-blue-50 rounded-xl border border-blue-100">
+            <div className="flex items-start gap-3 p-3 bg-blue-50 border border-blue-100">
               <input
                 type="checkbox"
                 id="agreement2"
                 required
-                className="w-5 h-5 mt-0.5 text-blue-600 rounded focus:ring-blue-500 cursor-pointer"
+                className="w-5 h-5 mt-0.5 text-blue-600 focus:ring-blue-500 cursor-pointer"
               />
               <label htmlFor="agreement2" className="text-base text-gray-700 cursor-pointer">
                 <span className="font-semibold text-blue-600">개인정보 수집 및 이용</span>에 동의합니다. (필수)
@@ -139,7 +139,7 @@ export default function ContactFormSection() {
             <div className="text-center pt-2">
               <button
                 type="submit"
-                className="px-12 py-4 bg-blue-600 text-white font-bold text-xl rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-blue-700"
+                className="px-12 py-4 bg-blue-600 text-white font-bold text-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-blue-700"
               >
                 <span className="flex items-center gap-2 justify-center">
                   <FaPhone className="text-2xl" />

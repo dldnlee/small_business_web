@@ -19,10 +19,10 @@ interface HeroSlide {
 const heroSlides: HeroSlide[] = [
   {
     id: 1,
-    title: '중기기업지원단',
+    title: '제이에스에너지',
     subtitle: '성공과 희망이 동반자',
-    description1: '중소기업지원센터는 중소 신생법인 힘에 대한민국의',
-    description2: '중소기업과 소상공인 모두를 응원합니다!',
+    description1: '사우나업체의 에너지비용을 최소40%이상 절감해드립니다.',
+    description2: '에너지절감기 설치비용90% 융자(서울시 무이자 , 경기도 1.5% )',
     bgImage: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop',
   },
 
@@ -81,7 +81,7 @@ export default function HeroSection() {
                       </h1>
                       <div className="space-y-2">
                         <p className="text-lg text-gray-800">
-                          중소기업의 <span className="text-blue-600 font-semibold">{slide.subtitle}</span>.
+                          사우나의 <span className="text-blue-600 font-semibold">{slide.subtitle}</span>.
                         </p>
                         <p className="text-base text-gray-700">
                           {slide.description1}

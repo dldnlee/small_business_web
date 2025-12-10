@@ -11,7 +11,7 @@ export default function Home() {
       <div className='mx-auto w-full max-w-7xl flex flex-col'>
         <HeroSection />
         <GovernmentProgramsSection />
-        <BusinessTypeSection />
+        {/* <BusinessTypeSection /> */}
         {/* <ProgramDetailsSection /> */}
         <ContactFormSection />
       </div>

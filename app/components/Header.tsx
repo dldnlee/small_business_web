@@ -12,7 +12,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link href="/">
-              <h1 className="text-xl sm:text-2xl font-bold text-blue-900 cursor-pointer hover:text-blue-700 transition-colors">중기기업지원단</h1>
+              <h1 className="text-xl sm:text-2xl font-bold text-blue-900 cursor-pointer hover:text-blue-700 transition-colors">제이에스에너지</h1>
             </Link>
           </div>
 

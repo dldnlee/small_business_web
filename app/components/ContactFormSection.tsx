@@ -10,7 +10,7 @@ export default function ContactFormSection() {
   };
 
   return (
-    <section id="contact" className="bg-white text-black overflow-hidden pb-20">
+    <section id="contact" className="bg-white text-black overflow-hidden pb-20 pt-10">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <motion.div

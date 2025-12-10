@@ -6,8 +6,8 @@ import { CiMail } from 'react-icons/ci';
 const heroContent = {
   title: '제이에스에너지',
   subtitle: '성공과 희망이 동반자',
-  description1: '사우나업체의 에너지비용을 최소40%이상 절감해드립니다.',
-  description2: '에너지절감기 설치비용90% 융자(서울시 무이자 , 경기도 1.5% )',
+  description1: '사우나업체의 에너지비용을 최소 40%이상 절감해드립니다.',
+  description2: '에너지절감기 설치비용 90% 융자(서울시 무이자 , 경기도 1.5%)',
   bgImage: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=2070&auto=format&fit=crop',
 };
 

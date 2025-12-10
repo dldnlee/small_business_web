@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "중소기업지원센터 - 2025년 정부지원금 컨설팅",
-  description: "2025년 중소기업 소상공인 정부정책자금 및 창업 정책자금 컨설팅 전문",
+  title: "제이에스에너지 | 정부지원금 폐수열회수기",
+  description: "사우나의 성공과 희망이 동반자.",
 };
 
 export default function RootLayout({

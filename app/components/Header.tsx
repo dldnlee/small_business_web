@@ -44,10 +44,9 @@ export default function Header() {
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t">
           <nav className="px-4 pt-2 pb-4 space-y-2">
-            <Link href="/" className="block py-2 text-gray-700 hover:text-blue-600">홈</Link>
-            <Link href="/service" className="block py-2 text-gray-700 hover:text-blue-600">서비스</Link>
-            <Link href="/#programs" className="block py-2 text-gray-700 hover:text-blue-600">정부정책자금</Link>
-            <Link href="/#contact" className="block py-2 text-gray-700 hover:text-blue-600">상담신청</Link>
+            <Link href="/" className="block py-2 text-gray-700 hover:text-blue-600" onClick={() => setIsMenuOpen(false)}>홈</Link>
+            <Link href="/service/heat-recovery" className="block py-2 text-gray-700 hover:text-blue-600" onClick={() => setIsMenuOpen(false)}>세부내용</Link>
+            <Link href="/#contact" className="block py-2 text-gray-700 hover:text-blue-600" onClick={() => setIsMenuOpen(false)}>상담신청</Link>
           </nav>
         </div>
       )}

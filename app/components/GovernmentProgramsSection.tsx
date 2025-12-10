@@ -9,11 +9,11 @@ export default function GovernmentProgramsSection() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-0">
           {/* Left Sidebar */}
-          <div className="lg:w-2/5 bg-white text-blue-700 flex flex-col justify-center items-center p-6 sm:p-8 lg:p-10">
-            <div className="text-base sm:text-lg leading-relaxed">
-              <p className="text-blue-900">
+          <div className="lg:w-2/5 bg-gray-900 text-white flex flex-col justify-center items-center p-6 sm:p-8 lg:p-10">
+            <div className="text-lg sm:text-xl lg:text-2xl leading-relaxed">
+              <p className="text-white">
                 정부지원사업 참여 - 내자금 10% 정부자금 90%로<br className="hidden sm:block" />
-                <span className="font-bold">매달내는 연료비 2,000만원을 절감합니다.</span>
+                <span className="font-bold text-yellow-400">매달내는 연료비 2,000만원을 절감합니다.</span>
               </p>
             </div>
           </div>
@@ -29,10 +29,10 @@ export default function GovernmentProgramsSection() {
 
               <div className="relative h-full p-4 sm:p-6 lg:p-8 flex flex-col justify-between text-white">
                 <div>
-                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-2 sm:mb-3 lg:mb-4">
+                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2 sm:mb-3 lg:mb-4">
                     {services[0].title}
                   </h3>
-                  <p className="text-sm sm:text-base leading-relaxed mb-3 sm:mb-4 lg:mb-6">
+                  <p className="text-base sm:text-lg lg:text-xl leading-relaxed mb-3 sm:mb-4 lg:mb-6">
                     {services[0].description}
                   </p>
 
@@ -41,8 +41,8 @@ export default function GovernmentProgramsSection() {
                     <ul className="space-y-1.5 sm:space-y-2">
                       {services[0].features.map((feature, index) => (
                         <li key={index} className="flex items-start">
-                          <span className="text-yellow-400 mr-2">✓</span>
-                          <span className="text-xs sm:text-sm">{feature}</span>
+                          <span className="text-yellow-400 mr-2 text-lg">✓</span>
+                          <span className="text-sm sm:text-base lg:text-lg">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -51,7 +51,7 @@ export default function GovernmentProgramsSection() {
 
                 <Link
                   href={services[0].route}
-                  className="mt-3 sm:mt-4 inline-flex items-center text-xs sm:text-sm font-semibold text-white bg-blue-600 px-4 sm:px-6 py-2 sm:py-3 rounded hover:bg-blue-700 transition-colors self-start"
+                  className="mt-3 sm:mt-4 inline-flex items-center text-sm sm:text-base lg:text-lg font-semibold text-white bg-blue-600 px-4 sm:px-6 py-2 sm:py-3 rounded hover:bg-blue-700 transition-colors self-start"
                 >
                   <span className="mr-2">⊕</span> 세부내역
                 </Link>

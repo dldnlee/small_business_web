@@ -17,10 +17,46 @@ export default function HeroSection() {
     phone: '',
     agreement: false,
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert('상담 신청이 접수되었습니다. 빠른 시일 내에 연락드리겠습니다.');
+    setIsSubmitting(true);
+    setSubmitMessage('');
+
+    try {
+      const response = await fetch('/api/mail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          phone: formData.phone,
+          formType: 'hero',
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitMessage(data.message);
+        setFormData({
+          name: '',
+          phone: '',
+          agreement: false,
+        });
+      } else {
+        setSubmitMessage(data.message || '오류가 발생했습니다. 다시 시도해주세요.');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSubmitMessage('전송 중 오류가 발생했습니다. 다시 시도해주세요.');
+    } finally {
+      setIsSubmitting(false);
+      setTimeout(() => setSubmitMessage(''), 5000);
+    }
   };
 
   return (
@@ -77,20 +113,14 @@ export default function HeroSection() {
 
                 <div className="flex items-center gap-3">
                   <label className="text-xs font-semibold w-12 shrink-0">연락처</label>
-                  <div className="flex gap-1 flex-1">
-                    <select className="px-2 py-2 rounded text-gray-900 text-sm focus:ring-2 focus:ring-blue-300 focus:outline-none bg-white">
-                      <option>010</option>
-                      <option>02</option>
-                    </select>
-                    <span className="text-white self-center">-</span>
-                    <input
-                      type="tel"
-                      required
-                      maxLength={4}
-                      className="flex-1 px-2 bg-white py-2 rounded text-gray-900 text-sm focus:ring-2 focus:ring-blue-300 focus:outline-none text-center"
-                      placeholder=""
-                    />
-                  </div>
+                  <input
+                    type="tel"
+                    required
+                    placeholder="010-1234-5678"
+                    className="flex-1 px-3 py-2 bg-white rounded text-gray-900 text-sm focus:ring-2 focus:ring-blue-300 focus:outline-none"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  />
                 </div>
 
                 <div className="flex items-start gap-2 pt-1">
@@ -107,11 +137,18 @@ export default function HeroSection() {
                   </label>
                 </div>
 
+                {submitMessage && (
+                  <div className={`text-xs p-2 rounded ${submitMessage.includes('오류') || submitMessage.includes('실패') ? 'bg-red-100 text-red-700' : 'bg-green-100 text-green-700'}`}>
+                    {submitMessage}
+                  </div>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full bg-yellow-500 text-white font-bold py-2.5 px-6 rounded transition-colors text-sm"
+                  disabled={isSubmitting}
+                  className="w-full bg-yellow-500 text-white font-bold py-2.5 px-6 rounded transition-colors text-sm disabled:opacity-50 disabled:cursor-not-allowed hover:bg-yellow-600"
                 >
-                  상담 신청하기
+                  {isSubmitting ? '전송 중...' : '상담 신청하기'}
                 </button>
               </form>
 

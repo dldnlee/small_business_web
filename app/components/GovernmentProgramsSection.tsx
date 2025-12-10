@@ -8,41 +8,6 @@ import 'swiper/css/navigation';
 import Link from 'next/link';
 import { services } from '@/app/data/services';
 
-interface FeatureIcon {
-  id: number;
-  title: string;
-  description: string;
-  iconPath: string;
-}
-
-const featureIcons: FeatureIcon[] = [
-  {
-    id: 1,
-    title: '소상공인',
-    description: '소상공인 맞춤 지원',
-    iconPath: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
-  },
-  {
-    id: 2,
-    title: '운전자금',
-    description: '기업 운영 자금 지원',
-    iconPath: 'M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z',
-  },
-  {
-    id: 3,
-    title: '서비스업',
-    description: '서비스업 특화 지원',
-    iconPath: 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2',
-  },
-  {
-    id: 4,
-    title: '법인설립',
-    description: '법인 설립 지원',
-    iconPath: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z',
-  },
-];
-
-
 export default function GovernmentProgramsSection() {
   return (
     <section id="programs" className="py-0">
@@ -52,22 +17,24 @@ export default function GovernmentProgramsSection() {
           <div className="lg:w-2/5 bg-blue-700 text-white p-4 sm:p-6 lg:p-8 flex flex-col justify-between items-center">
             <div className="w-full">
               <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 lg:mb-8 text-center lg:text-left">정부정책자금</h2>
+            </div>
 
-              {/* Feature Icons - Responsive Grid */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-2 gap-3 sm:gap-4 mb-4 sm:mb-6 lg:mb-8">
-                {featureIcons.map((feature) => (
-                  <div key={feature.id} className="flex flex-col items-center text-center">
-                    <div className="w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-white rounded-full flex items-center justify-center shrink-0 mb-2 sm:mb-3">
-                      <svg className="w-7 h-7 sm:w-8 sm:h-8 lg:w-10 lg:h-10 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={feature.iconPath} />
-                      </svg>
-                    </div>
-                    <div className="flex flex-col">
-                      <p className="text-sm sm:text-base font-bold mb-0.5 sm:mb-1">{feature.title}</p>
-                      <p className="text-xs text-blue-100 leading-tight hidden sm:block">{feature.description}</p>
+            {/* Event Section */}
+            <div className="w-full mb-4 sm:mb-6">
+              <div className="bg-white text-blue-700 p-4 rounded-lg">
+                <div className="flex items-start gap-2">
+                  <div className="shrink-0 mt-1">
+                    <div className="bg-blue-700 text-white text-xs font-bold px-2 py-1 rounded">
+                      이벤트
                     </div>
                   </div>
-                ))}
+                  <div className="text-sm leading-relaxed">
+                    <p className="text-blue-900">
+                      정부지원사업 참여- 내자금 10% 정부자금 90%로<br className="hidden sm:block" />
+                      <span className="font-bold">매달내는 연료비 2,000만원을 절감합니다.</span>
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 

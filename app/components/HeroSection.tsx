@@ -80,13 +80,13 @@ export default function HeroSection() {
                         {slide.title}
                       </h1>
                       <div className="space-y-2">
-                        <p className="text-lg text-gray-800">
+                        <p className="text-xl text-gray-800">
                           사우나의 <span className="text-blue-600 font-semibold">{slide.subtitle}</span>.
                         </p>
-                        <p className="text-base text-gray-700">
+                        <p className="text-xl text-gray-700">
                           {slide.description1}
                         </p>
-                        <p className="text-base text-gray-700">
+                        <p className="text-xl text-gray-700">
                           {slide.description2}
                         </p>
                       </div>

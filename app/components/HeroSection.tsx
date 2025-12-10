@@ -29,7 +29,7 @@ export default function HeroSection() {
         <div className="flex flex-col lg:flex-row">
           {/* Left Side - Hero Content */}
           <div className="bg-white w-full lg:flex-1 overflow-hidden">
-            <div className="relative w-full h-full min-h-[400px]">
+            <div className="relative w-full h-full min-h-[300px] sm:min-h-[400px]">
               {/* Background Image */}
               <div
                 className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -39,18 +39,18 @@ export default function HeroSection() {
               <div className="absolute inset-0 bg-black/70"></div>
 
               {/* Content */}
-              <div className="relative space-y-6 p-20">
-                <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight">
+              <div className="relative space-y-4 sm:space-y-6 p-6 sm:p-10 lg:p-20">
+                <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
                   {heroContent.title}
                 </h1>
                 <div className="space-y-2">
-                  <p className="text-xl text-white">
+                  <p className="text-base sm:text-lg lg:text-xl text-white">
                     사우나의 <span className="text-blue-400 font-semibold">{heroContent.subtitle}</span>.
                   </p>
-                  <p className="text-xl text-white">
+                  <p className="text-base sm:text-lg lg:text-xl text-white">
                     {heroContent.description1}
                   </p>
-                  <p className="text-xl text-white">
+                  <p className="text-base sm:text-lg lg:text-xl text-white">
                     {heroContent.description2}
                   </p>
                 </div>
@@ -59,9 +59,9 @@ export default function HeroSection() {
           </div>
 
           {/* Right Side - Contact Form */}
-          <div className="bg-blue-600 px-6 py-8 text-white max-w-md">
+          <div className="bg-blue-600 px-4 sm:px-6 py-6 sm:py-8 text-white w-full lg:max-w-md">
             <div className="flex flex-col h-full">
-              <h3 className="text-xl font-bold mb-5 text-center">빠른 상담신청</h3>
+              <h3 className="text-lg sm:text-xl font-bold mb-4 sm:mb-5 text-center">빠른 상담신청</h3>
 
               <form onSubmit={handleSubmit} className="space-y-3 grow">
                 <div className="flex items-center gap-3">
